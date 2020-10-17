@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="tannoy" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v10.17.0/bin/node" path-to-js-file="src/index.js" working-dir="$PROJECT_DIR$">
+    <method v="2" />
+  </configuration>
+</component>
