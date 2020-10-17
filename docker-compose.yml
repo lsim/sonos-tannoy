@@ -1,6 +1,6 @@
 version: '3'
 services:
-  sonos-tannoy:
+  sonos_tannoy:
     container_name: sonos-tannoy
     image: larsim/sonos-tannoy:Dockerfile
     restart: unless-stopped
