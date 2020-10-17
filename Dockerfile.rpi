@@ -1,8 +1,8 @@
-FROM raspbian/stretch
+FROM arm32v7/node
 
 RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y python make g++ sox node
+#RUN apt-get upgrade -y
+RUN apt-get install -y python make g++ sox
 #RUN apt-get install -y linux-headers eudev-dev libusb-dev
 RUN apt-get install -y libusb-dev
 #RUN apk add --no-cache --virtual  pkgconfig libusb
