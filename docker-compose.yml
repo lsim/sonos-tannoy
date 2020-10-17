@@ -2,7 +2,7 @@ version: '3'
 services:
   sonos-tannoy:
     container_name: sonos-tannoy
-    image: larsim/sonos-tannoy:Dockerfile
+    image: larsim/sonos-tannoy:latest
     restart: unless-stopped
     privileged: true # Necessary for hid stuff
     network_mode: "host"
