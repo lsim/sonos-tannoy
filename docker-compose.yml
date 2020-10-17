@@ -2,14 +2,10 @@ version: '3'
 services:
   sonos-tannoy:
     container_name: sonos-tannoy
-    image: larsim/sonos-tannoy:latest
+    image: larsim/sonos-tannoy:Dockerfile
     restart: unless-stopped
     privileged: true # Necessary for hid stuff
     network_mode: "host"
     environment:
-#      - IMAGE_PATH=/magrab/images
-#      - DB_FILE_PATH=/magrab/magrab-projects.db
-#      - VIDEO_PATH=/magrab/gifs
     volumes:
-#      - .:/magrab
       - /dev/bus/usb /dev/bus/usb # for hid stuff
