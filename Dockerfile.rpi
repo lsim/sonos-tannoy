@@ -12,6 +12,7 @@ RUN apt-get install -y libusb-dev linux-headers-rpi
 RUN apt-get install -y pkg-config
 RUN apt-get install -y libudev-dev
 RUN apt-get install -y libusb-1.0-0-dev
+RUN apt-get install -y libc6-armhf-cross
 USER root
 WORKDIR /opt/app
 
