@@ -13,7 +13,7 @@ RUN apt-get install -y pkg-config libudev-dev libusb-1.0-0-dev libc6
 USER root
 WORKDIR /opt/app
 
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 RUN npm cache clean --force && npm install --only=prod
 
