@@ -4,7 +4,7 @@ RUN apt-get update
 #RUN apt-get upgrade -y
 RUN apt-get install -y python make g++ sox
 #RUN apt-get install -y linux-headers eudev-dev libusb-dev
-RUN apt-get install -y libusb-dev
+RUN apt-get install -y libusb-dev raspberrypi-kernel-headers udev-dev
 #RUN apk add --no-cache --virtual  pkgconfig libusb
 
 USER root
