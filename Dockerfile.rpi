@@ -1,8 +1,9 @@
-FROM arm32v7/node
+FROM raspbian/stretch
 
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update
 #RUN apt-get upgrade -y
-RUN apt-get install -y python make g++ sox
+RUN apt-get install -y python make g++ sox nodejs
 #RUN apt-get install -y linux-headers eudev-dev libusb-dev
 RUN apt-get install -y libusb-dev linux-headers-rpi udev-dev
 #RUN apk add --no-cache --virtual  pkgconfig libusb
