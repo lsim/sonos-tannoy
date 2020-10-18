@@ -9,7 +9,7 @@ RUN apt-get install -y python make g++ sox nodejs
 #RUN apt-get install -y linux-headers eudev-dev libusb-dev
 RUN apt-get install -y libusb-dev linux-headers-rpi udev
 #RUN apk add --no-cache --virtual  pkgconfig libusb
-RUN apt-get install -y pkgconfig
+RUN apt-get install -y pkg-config
 
 USER root
 WORKDIR /opt/app
