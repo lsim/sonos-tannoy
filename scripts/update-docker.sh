@@ -4,6 +4,6 @@
 # without the toolchain dependencies
 
 docker login
-docker build . -t sonos-tannoy:latest
+docker build . -t sonos-tannoy:latest -f Dockerfile.rpi
 docker tag sonos-tannoy larsim/sonos-tannoy:latest
 docker push larsim/sonos-tannoy:latest
