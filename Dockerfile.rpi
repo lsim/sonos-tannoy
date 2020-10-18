@@ -16,7 +16,7 @@ WORKDIR /opt/app
 COPY package.json ./
 
 RUN npm cache clean --force && npm install --only=prod
-
+RUN apt-get install -y libc6-dev-armhf-cross
 # Each command / line in this file makes up a 'layer'. The result of each is cached.
 
 # copy app source to image _after_ npm install so that
