@@ -4,16 +4,12 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-#RUN apt-get upgrade -y
-#RUN apt-get install -y python make g++ sox nodejs linux-headers-rpi pkg-config libudev-dev libusb-1.0-0-dev
 RUN apt-get install -y python make g++ sox nodejs linux-headers-rpi libudev-dev libusb-1.0-0-dev pkg-config
-#RUN apt-get install -y linux-headers eudev-dev libusb-dev
-#RUN apk add --no-cache --virtual  pkgconfig libusb
-#libc6
+
 USER root
 WORKDIR /opt/app
 
-COPY package.json ./
+COPY package.json package-lock.json ./
 
 RUN npm cache clean --force && npm install --only=prod
 #RUN apt-get install -y libc6-dev-armhf-cross
@@ -23,4 +19,4 @@ RUN npm cache clean --force && npm install --only=prod
 # application code changes don't bust the docker cache of npm install step
 COPY . ./
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "start" ]
